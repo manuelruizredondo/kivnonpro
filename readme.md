@@ -15,7 +15,7 @@ los elementos son aquellos que tienen _NOMBREDELASECCION, estos modulos no tiene
 _MENU
 _FOOTER
 
-##ZONAS DINAMICAS
+## ZONAS DINAMICAS
 
 BLOG
 CAREER
