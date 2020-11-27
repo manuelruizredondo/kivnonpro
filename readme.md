@@ -4,9 +4,10 @@ Primeramente usaremos node 12
 
 `npm i  ` descargar los package de desarrollo
 
-`Gulp dev `para entornos de desarrollos
+
 `Gulp build` para generar un compilado listo para subir
-`gulp style` genera la guia de estilos y 3 css mandandolos al dist
+
+
 
 # Modulos
 
@@ -38,4 +39,4 @@ Y DE CAREER 3 ULTIMAS
 NOSOTROS -- SE NUTRE DE CAREER 3 ULTIMAS
 
 
-###EL RESTO DE LAS PAGINAS SE PODRÁN TRADUCIR
+### EL RESTO DE LAS PAGINAS SE PODRÁN TRADUCIR
