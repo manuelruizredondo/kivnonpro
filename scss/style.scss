@@ -23,7 +23,8 @@ a {
 /*+------------------------------------------------------------+
 |       -FASE 2 : IMPORTA TU HOLYGRAIL
 +------------------------------------------------------------+*/
-@import "../../holygrailcss/scss/partials";
+@import "../node_modules/holygrailcss/scss/partials.scss";
+
 //@import "../node_modules/holygrailcss/scss/hgpartials.scss";
 @import "./_post-holygrail.scss";
 @import "./_kv-menu.scss";

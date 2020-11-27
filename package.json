@@ -36,7 +36,7 @@
         "gulp-rename": "^2.0.0",
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.5",
-        "holygrailcss": "^1.4.8",
+        "holygrailcss": "^1.6.30",
         "interactjs": "^1.8.5",
         "node-sass": "^4.13.1"
     },
