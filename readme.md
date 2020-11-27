@@ -2,6 +2,13 @@
 #Getting started
 Primeramente usaremos node 12
 
+
+descargamos el repo 
+
+$ git clone https://github.com/manuelruizredondo/kivnonpro.git
+
+
+
 `npm i  ` descargar los package de desarrollo
 
 `Gulp dev `para entornos de desarrollos
