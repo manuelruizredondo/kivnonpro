@@ -1,0 +1,185 @@
+/*+------------------------------------------------------------+
+ |       - FASE 1: IMPORTAR FUENTES
+ +------------------------------------------------------------+*/
+html,
+body,
+div,
+span,
+select,
+object {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@import "./custom.scss";
+/*+------------------------------------------------------------+
+|       -FASE 2 : IMPORTA TU HOLYGRAIL
++------------------------------------------------------------+*/
+@import "../../holygrailcss/scss/partials";
+//@import "../node_modules/holygrailcss/scss/hgpartials.scss";
+@import "./_post-holygrail.scss";
+@import "./_kv-menu.scss";
+@import "./_swiper.scss";
+@import "./video.scss";
+.xtitulo {
+  @include font-regular();
+  color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 20px;
+  background-color: #999;
+  margin: 10px 0;
+  text-align: center;
+}
+hr {
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid transparent;
+}
+/* .card4>.card4-img+.card4-content>.card-h>button*/
+a.link1 {
+  padding-right: 40px;
+  cursor: pointer;
+  svg {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    transform: scale(0.8);
+    transition: all 0.2s ease;
+    width: 26px;
+  }
+}
+
+section{
+  position: relative;
+}
+a.link1 {
+  &:hover {
+    opacity: 0.6;
+    svg {
+      right: 0px;
+    }
+  }
+}
+.c-red {
+  color: $primary;
+}
+.c-white {
+  color: #fff;
+}
+.bg-white {
+  background-color: #fff;
+}
+.kv-block11 {
+  @media (max-width: $break-md) {
+    margin-left: 8px;
+    padding-right: 16px;
+  }
+}
+.mob\:mb-20 {
+  @media (max-width: $break-md) {
+    margin-bottom: 20px;
+  }
+}
+.container {
+  @media (max-width: $break-md) {
+    padding-right: $padding-global * 2;
+    padding-left: $padding-global * 2;
+  }
+  @media (min-width: $break-lg) {
+    width: 100%;
+  }
+}
+.container-blog {
+  margin-top: -200px;
+  padding: 60px 100px;
+  margin-left: 15%;
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background-color: white;
+}
+.img-displacement {
+  width: calc(100% + 100px);
+  margin-left: -100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container-blog-white {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 200px;
+}
+.container-blog .subbox {
+  background-color: $bg-light;
+  padding: 20px;
+  margin-left: -100px;
+}
+.container-blog-img-2 {
+}
+.bg-icon-br {
+  right: 0;
+  bottom: 0;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../assets/images/bg-icon-br.png);
+  position: absolute;
+}
+.bg-icon-tl {  
+  left: 0;
+  top: 0;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../assets/images/bg-icon-tl.png);
+  position: absolute;
+}
+.sup-70 {
+  margin-top: -75px;
+}
+
+
+.discount {
+  position: absolute;
+  top:-13px;
+  left: -11px;
+  background-color: $primary;
+  font-size: 12px;
+  color: #fff;
+  padding: 8px;
+
+  @media (min-width: $break-sm) {
+    top: 16px;
+  }
+}
+
+.discount:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 12px solid #000;
+  border-left: 11px solid transparent;
+}
+
+.px-16{
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: $break-sm) {
+padding: 0;
+  }
+}

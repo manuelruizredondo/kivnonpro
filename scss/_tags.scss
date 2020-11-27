@@ -1,0 +1,709 @@
+@import "../../holygrailcss/scss/hgpartials.scss";
+
+$variable-list: (
+  break-xs: #{$break-xs},
+  /*Breakpoints*/ break-sm: #{$break-sm},
+  break-md: #{$break-md},
+  break-lg: #{$break-lg},
+  break-xl: #{$break-xl},
+  min-vw: #{$min-vw},
+  height-xs: #{$height-xs},
+  height-sm: #{$height-sm},
+  height-md: #{$height-md},
+  height-lg: #{$height-lg},
+  height-xl: #{$height-xl},
+  height-full: #{$height-full},
+  height-home: #{$height-home},
+  container: #{$container},
+  container-2: #{$container-2},
+  //maxwidth del container2
+  container-3: #{$container-3},
+  //maxwidth del container2
+  container-4: #{$container-4},
+  //maxwidth del container4
+  font-primary: #{$font-family-primary},
+  font-primary-weight-light: #{$font-weight-light},
+  font-primary-weight-regular: #{$font-weight-regular},
+  font-primary-weight-medium: #{$font-weight-medium},
+  font-primary-weight-bold: #{$font-weight-bold},
+  font-family-secondary: #{$font-family-secondary},
+  font-secondary-weight-light: #{$font-weight-secondary-light},
+  font-secondary-weight-medium: #{$font-weight-secondary-medium},
+  /* font-secondary-weight-bold: #{ $font-weight-secondary-bold}, */ xl: 1500px,
+);
+
+$colorsGuide: (
+  Error: #fd675e,
+);
+
+$colorsGuide: (
+  black: #000000,
+  secondary-color: #f5f5f5,
+  gray-90: #171717,
+  gray-80: #2e2e2e,
+  gray-70: #464646,
+  gray-60: #5d5d5d,
+  gray-50: #757575,
+  gray-40: #909090,
+  gray-30: #acacac,
+  gray-20: #c7c7c7,
+  gray-10: #e3e3e3,
+  makumba: #999999,
+  white-smoke: #f5f5f5,
+  White: #ffffff,
+  primary-guide: #{$primary-guide},
+  secondary-guide: #{$secondary-guide},
+  error-primary: #fd675e,
+  link: #c7c7c7,
+  linkHover: #999,
+  primary: $primary,
+  quartory-color: #e6f5ff,
+  cinco-color: #b5e6c8,
+  six-color: #fef7c1,
+  siete-color: #fadfc1,
+  ocho-color: #fcd8cd,
+  Error: #fd675e,
+  Sales: #fa3b2c,
+  Sales-Variant: #e43628,
+);
+
+@function color($color) {
+  @return map-get($colorsGuide, $color);
+}
+
+$variabletotals: length($variable-list);
+@for $i from 1 through $variabletotals {
+  .var-a-#{nth(map-keys($variable-list), $i)} {
+    &:after {
+      display: inline-block;
+      content: "#{nth(map-keys($variable-list), $i)}";
+    }
+  }
+  .var-b-#{nth(map-keys($variable-list), $i)} {
+    &:after {
+      content: "#{nth(map-values($variable-list), $i)}";
+      display: inline-block;
+    }
+  }
+}
+
+.tag-color-wrap {
+  .wrap-item {
+    .item {
+      height: 100px;
+      margin: 0;
+      position: relative;
+      &:after {
+        font-size: 12px;
+        position: absolute;
+        margin-top: -20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@each $name, $value in $colorsGuide {
+  $i: index(($colorsGuide), ($name $value));
+  $color0: $name; //funcion del color
+  $color1: nth($value, 1); //color
+
+  .wrap-item {
+    box-shadow: 0 9px 25px rgba(0, 0, 0, 0.06);
+    margin: 0;
+    position: relative;
+    width: 100px;
+    transition: all ease 300ms;
+    &:hover {
+      box-shadow: 0px 15px 19px 0px rgba(0, 0, 0, 0.16);
+    }
+  }
+  .wrap-item:nth-child(#{$i}) {
+    color: #000;
+    .item {
+      background-color: $color1;
+      &:after {
+        content: "#{$color1}";
+      }
+    }
+
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: white;
+    &:after {
+      position: absolute;
+      margin-top: -50px;
+      bottom: 10px;
+      font-size: 12px;
+      left: 16px;
+    }
+    :before {
+      position: absolute;
+      z-index: 10;
+      font-size: 12px;
+      margin-top: -40px;
+      left: 0;
+      content: "#{$color0}";
+    }
+  }
+}
+
+/***creacion de las variables****/
+
+@each $name, $value in $colorsGuide {
+  $i: index(($colorsGuide), ($name $value));
+  $color0: $name; //funcion del color
+  $color1: nth($value, 1); //color
+
+  .c-#{$color0} {
+    color: $color1;
+  }
+}
+
+/* TIPOGRAFIAS */
+
+.guide table td {
+  padding: 10px;
+  vertical-align: top;
+  border: 1px solid #eaeaea;
+}
+
+.resize {
+  z-index: 10;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+  user-select: none;
+
+  &.resize-sm {
+    max-width: 300px;
+    height: 300px;
+    .resizable {
+      min-height: 300px;
+    }
+  }
+
+  &.resize-md {
+    max-width: 500px;
+    height: 500px;
+    .resizable {
+      min-height: 500px;
+    }
+  }
+
+  &.resize-lg {
+    max-width: 900px;
+    height: 500px;
+    .resizable {
+      min-height: 500px;
+    }
+  }
+}
+
+.card3 {
+  width: 100%;
+  float: left;
+
+  span {
+    position: absolute;
+    bottom: 8px; //$padding-global
+    left: 8px;
+  }
+  &.half {
+    width: 50%;
+  }
+}
+
+.arrow-cover {
+  height: auto;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  transition: opacity 0.3s ease;
+
+  z-index: 6;
+}
+
+.arrow-cover svg {
+  -webkit-animation: bounce 0.8s infinite alternate;
+  animation: bounce 0.8s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+}
+
+.guide-dark-bg {
+  position: relative;
+  background: #000;
+  padding: 10px 20px 20px;
+  display: inline-block;
+  &:after {
+    content: ".has-light";
+    color: #fff;
+    position: absolute;
+    font-size: 8px;
+    top: 2px;
+    left: 5px;
+    opacity: 0.8;
+  }
+}
+
+.typelist-box {
+  max-width: 900px;
+  .item {
+    box-sizing: border-box;
+
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 10px;
+    position: relative;
+  }
+}
+
+.wrap-item-type_header {
+  float: left;
+  position: relative;
+  width: 100%;
+  transition: all ease 300ms;
+  display: flex;
+
+  .item {
+    @include font-medium();
+
+    border-bottom: 2px solid #d4d4d4;
+    min-height: 70px;
+    text-align: center;
+    font-size: 14px;
+
+    &:after {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .item-0 {
+    word-wrap: break-word;
+  }
+  .item-1 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-xs}";
+    }
+  }
+  .item-2 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-sm}";
+    }
+  }
+  .item-3 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-md}";
+    }
+  }
+  .item-4 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-lg}";
+    }
+  }
+  .item-5 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-xl}";
+    }
+  }
+  .item-6 {
+    &:after {
+      @include font-bold();
+    }
+  }
+  .item-7 {
+    &:after {
+      @include font-bold();
+    }
+  }
+}
+
+.tag-wrap-item_header {
+  float: left;
+  position: relative;
+  width: 100%;
+  transition: all ease 300ms;
+  display: table;
+
+  .item {
+    display: table-cell;
+
+    &:after {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .item-0 {
+    word-wrap: break-word;
+  }
+  .item-1 {
+    &:after {
+      @include font-bold();
+    }
+  }
+  .item-2 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-xs}";
+    }
+  }
+  .item-3 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-sm}";
+    }
+  }
+  .item-4 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-md}";
+    }
+  }
+  .item-5 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-lg}";
+    }
+  }
+  .item-6 {
+    &:after {
+      @include font-light();
+      content: " - #{$break-xl}";
+    }
+  }
+  .item-7 {
+    &:after {
+      @include font-bold();
+    }
+  }
+}
+
+@each $name, $value in $headers {
+  $i: index(($headers), ($name $value));
+  $type0: $name; //funcion del fipografia
+  $type1: nth($value, 1); //tipografia
+  $type2: nth($value, 2);
+  $type3: nth($value, 3);
+  $type4: nth($value, 4);
+  $type5: nth($value, 5);
+  $type6: nth($value, 6);
+
+  .wrap-item-type {
+    float: left;
+
+    position: relative;
+    width: 100%;
+    transition: all ease 300ms;
+    border: 1px solid #ffffff;
+
+    &:hover{
+        border: 1px solid #eaeaea;
+    }
+
+  }
+  .wrap-item-type:nth-child(#{$i}) {
+    background-color: white;
+    .item {
+      padding: 10px;
+      position: relative;
+      font-size: 14px;
+      text-align: center;
+      user-select: auto;
+      min-width: 60px;
+      text-align: left;
+      &:after {
+        width: 100%;
+        text-align: center;
+        content: "#{$name}";
+        user-select: auto;
+      }
+    }
+
+    .item-0 {
+      display: none;
+      float: left;
+      @include font-bold();
+      color: #ec4137;
+      word-wrap: break-word;
+    }
+
+    .item-1 {
+      float: left;
+      &:after {
+        @extend .#{$name};
+        content: " #{$name}  Titulo ";
+      }
+    }
+
+    .item-2 {
+      float: left;
+      clear: both;
+      &:after {
+        color: #ccc;
+        content: "#{$type1}";
+      }
+    }
+    .item-3 {
+      float: left;
+      &:after {
+        color: #ccc;
+        content: "#{$type2}";
+      }
+    }
+    .item-4 {
+      float: left;
+      &:after {
+        color: #ccc;
+        content: "#{$type3}";
+      }
+    }
+    .item-5 {
+      float: left;
+      &:after {
+        color: #ccc;
+        content: "#{$type4}";
+      }
+    }
+    .item-6 {
+      float: left;
+      &:after {
+        color: #ccc;
+        @include font-bold();
+        content: "#{$type5}";
+      }
+    }
+    .item-7 {
+      float: left;
+      &:after {
+        @include font-bold();
+        content: "#{$type6}";
+      }
+    }
+  }
+}
+
+/**textos fluidos**/
+
+.fluid-box {
+  max-width: 800px;
+  .item {
+    box-sizing: border-box;
+    width: 25%;
+    border: 1px solid #d4d4d4;
+    margin-right: -1px;
+    margin-top: -1px;
+  }
+}
+
+@each $name, $value in $headersFluids {
+  $i: index(($headersFluids), ($name $value));
+
+  $typeFluid0: $name; //funcion del fipografia
+  $typeFluid1: nth($value, 1); //tipografia
+  $typeFluid2: nth($value, 2);
+  $typeFluid3: nth($value, 3);
+
+  .wrap-item-typeFluid {
+    position: relative;
+    width: 100%;
+    transition: all ease 300ms;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &:last-child {
+      border-bottom: 1px solid #eaeaea;
+    }
+    &:hover {
+      box-shadow: 0px 15px 19px 0px rgba(0, 0, 0, 0.16);
+    }
+  }
+  .wrap-item-typeFluid:nth-child(#{$i}) {
+    background-color: white;
+    .item {
+      padding: 10px 0;
+      position: relative;
+      font-size: 14px;
+      text-align: center;
+      &:after {
+        width: 100%;
+        text-align: center;
+        content: "#{$name}";
+      }
+    }
+    .item-0 {
+      @include font-bold();
+      color: #ec4137;
+      word-wrap: break-word;
+    }
+    .item-1 {
+      &:after {
+        content: "#{$typeFluid1}";
+      }
+    }
+    .item-2 {
+      &:after {
+        content: "#{$typeFluid2}";
+      }
+    }
+    .item-3 {
+      &:after {
+        content: "#{$typeFluid3}";
+      }
+    }
+  }
+}
+
+.tag-wrap-item {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  transition: all ease 300ms;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &:hover {
+    background-color: #eaeaea;
+  }
+  .item {
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+
+    &:after {
+      border: 1px solid #eaeaea;
+      width: 100%;
+      height: 100%;
+
+      padding: 10px;
+      float: left;
+    }
+    &:empty {
+      padding: 0;
+    }
+  }
+}
+
+@mixin tagSpacing($spacingArray, $spacingName, $totalItems) {
+  @each $name, $value in $spacingArray {
+    $i: index(($spacingArray), ($name $value));
+    $spacing0: $name; //funcion del fipografia
+    $spacing1: nth($value, 1); //tipografia
+    $spacing2: nth($value, 2);
+    $spacing3: nth($value, 3);
+    $spacing4: nth($value, 4);
+
+    .#{$spacingName} {
+      .tag-wrap-item:nth-child(#{$i}) {
+        .item {
+          width: 100% / $totalItems;
+          &:after {
+            content: "#{$name}";
+          }
+        }
+        .item-0 {
+          color: #ec4137;
+          word-wrap: break-word;
+        }
+        .item-1 {
+          &:after {
+            content: "#{$spacing1}";
+          }
+        }
+        .item-2 {
+          &:after {
+            content: "#{$spacing2}";
+          }
+        }
+        .item-3 {
+          &:after {
+            content: "#{$spacing3}";
+          }
+        }
+        .item-4 {
+          &:after {
+            content: "#{$spacing4}";
+          }
+        }
+      }
+    }
+  }
+}
+
+/* margin*/
+@include tagSpacing($margin, "marginbox", 5);
+@include tagSpacing($margin-y, "marginbox-y", 5);
+@include tagSpacing($margin-x, "marginbox-x", 5);
+@include tagSpacing($margin-top, "marginbox-top", 5);
+@include tagSpacing($margin-right, "marginbox-right", 5);
+@include tagSpacing($margin-bottom, "marginbox-bottom", 5);
+@include tagSpacing($margin-left, "marginbox-left", 5);
+
+/* padding*/
+@include tagSpacing($padding, "paddingbox", 5);
+@include tagSpacing($padding-y, "paddingbox-y", 5);
+@include tagSpacing($padding-x, "paddingbox-x", 5);
+@include tagSpacing($padding-top, "paddingbox-top", 5);
+@include tagSpacing($padding-left, "paddingbox-left", 5);
+@include tagSpacing($padding-bottom, "paddingbox-bottom", 5);
+@include tagSpacing($padding-right, "paddingbox-right", 5);
+
+.site-menu-mobile {
+  background-color: black;
+  position: fixed;
+  height: 100vh;
+  width: 70px;
+}
+.site-navigation {
+  display: none;
+  @media (min-width: $break-md) {
+    display: block;
+  }
+  @media (min-width: $break-lg) {
+  }
+}
+
+.wrap-item {
+  float: left;
+}

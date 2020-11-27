@@ -1,0 +1,163 @@
+
+$primary:  #c93535;
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none !important;
+}
+.swiper-container {
+  width: 100%;
+  height: 400px;
+  @media (min-width: 992px) {
+    height: 90vh;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: auto;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(0, 0, 0, 0.3);
+    svg {
+      position: absolute;
+      top: 4px;
+      left: 6px;
+    }
+    @media (min-width: 992px) {
+      top: auto;
+      width: 77px;
+      height: 77px;
+      background-color: rgba(0, 0, 0, 0.3);
+      svg {
+        position: absolute;
+        top: 23px;
+        left: 20px;
+      }
+    }
+
+    &:hover{
+      opacity: .6;
+    }
+  }
+  .swiper-button-prev {
+    bottom: 60px;
+    left: 16px;
+    @media (min-width: 992px) {
+      bottom: 118px;
+      left: 40px;
+    }
+  }
+  .swiper-button-next {
+    bottom: 16px;
+    left: 16px;
+    @media (min-width: 992px) {
+      bottom: 40px;
+      left: 40px;
+    }
+  }
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  @media (min-width: 992px) {
+    background-position: bottom;
+  }
+}
+.scroll-downs {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+  z-index: 10;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+.swiper-pagination {
+  display: none;
+}
+.swiper-mini {
+  overflow: hidden;
+
+
+  &.swiper-container{
+    height: auto;
+    padding-bottom: 70px;
+  }
+  .swiper-slide {
+    width: 350px;
+    min-height: 550px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: auto;
+    width: 54px;
+    height: 54px;
+
+    background-color: $primary;
+
+
+    &:hover {
+      background-color: $primary;
+      opacity: .6;
+    }
+    svg {
+      position: absolute;
+      top: 11px;
+      left: 10px;
+    }
+  }
+  .swiper-button-disabled{
+    background-color: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  }
+
+
+  .swiper-button-prev {
+    bottom: 0;
+    left: 0;
+  }
+  .swiper-button-next {
+    bottom: 0px;
+    left: 60px;
+  }
+}
+.swiper-title {
+  position: absolute;
+  z-index: 10;
+  top: 35%;
+  .link1 {
+  }
+}

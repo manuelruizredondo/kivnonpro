@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1151px" height="607px" viewBox="0 0 1151 607" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Lineas</title>
+    <g id="_design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.05" stroke-linecap="square">
+        <path d="M0.5,0 L0.5,607 M175.5,0 L175.5,607 M370.5,0 L370.5,607 M565.5,0 L565.5,607 M760.5,0 L760.5,607 M955.5,0 L955.5,607 M1150.5,0 L1150.5,607" id="Lineas" stroke="#000000"></path>
+    </g>
+</svg>

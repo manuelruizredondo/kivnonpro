@@ -1,0 +1,199 @@
+
+
+
+ 
+/*** Fuente primaria  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;600;900&display=swap" rel="stylesheet"> **/
+
+/*** Fuente secundaria  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"> **/
+
+
+/** font-family: 'Source Sans Pro', sans-serif ;  **/
+
+//1-Copiar las fuentes en la carpeta assets/fonts
+
+//2-copiar font-face
+//3-Llenar fuentes 
+
+@font-face {
+  font-family: 'CeraPRO-Bold';
+
+	src: url("../assets/fonts/3447DA_0_0.eot");
+  src: url("../assets/fonts/3447DA_0_0.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/3447DA_0_0.woff2") format("woff2"),
+   url("../assets/fonts/3447DA_0_0.woff") format("woff"), url("../assets/fonts/3447DA_0_0.ttf") format("truetype");
+  font-display: swap;
+}
+
+
+
+$font-family-primary: 'Source Sans Pro', sans-serif ;
+
+$font-family-light:   'Source Sans Pro', sans-serif ;
+$font-family-regular: 'Source Sans Pro', sans-serif ;
+$font-family-medium:  'Source Sans Pro', sans-serif ;
+$font-family-bold:    'CeraPRO-Bold', sans-serif ;
+
+/** font-family: 'Playfair Display', serif; **/
+
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: 900;
+
+
+$font-family-secondary: 'Playfair Display', serif;
+
+$font-weight-secondary-light:200;
+$font-weight-secondary-regular:400;
+$font-weight-secondary-medium:700;
+$font-weight-secondary-bold:900;
+
+
+$primary:  #c93535;
+
+$primary-guide:#121F2A;
+$secondary-guide:$primary;
+
+
+$error-primary:#FD675E ;
+$link:    rgb(207, 236, 240) ;
+$linkHover:#999 ;
+$black:   #111111  ;
+
+$font-primary:#2C2C2C;
+
+
+
+$bg-light:#F4F3F0;
+
+
+
+$height-xs:80px;
+$height-sm:100px;
+$height-md:350px;
+$height-lg:400px;
+$height-xl:calc(100vh - 150px);
+
+
+b{
+
+  color:$font-primary ;
+}
+
+
+
+.em{
+  color:#B62323;
+}
+
+
+
+.hr-line{
+  border-bottom: 1px solid #B1B1B1 ;
+
+}
+
+
+
+$headers:
+/* name:mobile,768,992,1280,line-height,font */
+( h1: (32px, 32px, 32px, 56px, 1, "bold"),
+  h2: (24px, 24px, 24px, 32px, 1, "bold"),
+  h3: (18px, 18px, 18px, 24px, 1.2, "bold"),
+  h4: (16px, 16px, 16px, 18px, 1.2, "bold"),
+  h5: (13px, 13px, 13px, 13px, 1.2, "bold"),
+  h6: (12px, 12px, 12px, 14px, 1.2, "bold"),
+  h7: (14px, 14px, 14px, 14px, 1.2, "bold"),
+  h8: (8px, 8px, 8px, 10px, 1.2, "bold"),
+  h9: (8px, 8px, 8px, 10px, 1.2, "bold"),
+  h10: (8px, 8px, 8px, 10px, 1.2, "bold"),
+  h11: (16px, 18px, 18px, 22px, 1.5, "bold"),
+
+  h12: (24px, 24px, 32px, 42px, 1.2, "bold"),
+
+
+  p1: (14px, 14px, 14px, 14px, 1.6, "regular"),
+  p2: (16px, 16px, 16px, 16px, 1.5, "bold"),
+  p3: (14px, 14px, 14px, 14px, 1.5, "bold"),
+  p4: (14px, 14px, 16px, 18px, 1.4, "bold"));
+
+
+/* TYPES FIJOS */
+$headersFixers: (
+  /*name :  fontsize, lineheight */
+  12 : (12px, 1.5),
+  14 : (14px, 1.5),
+  16 : (16px, 1.5),
+  18 : (18px, 1.5),
+  20 : (20px, 1.5),
+  24 : (24px, 1.5),
+);
+$mb: "margin-bottom";
+$margin-bottom:
+/* name : margen bottom*/
+( 
+  mb-4:  (4px, 4px, 4px, 4px),
+  mb-10: (10px, 10px, 10px, 10px),
+  mb-16: (10px, 10px, 16px, 16px),
+  mb-20: (10px, 20px, 20px, 20px),
+  mb-24: (20px, 20px, 24px, 24px),
+  mb-30: (10px, 30px, 30px, 30px),
+  mb-40: (20px, 40px, 40px, 40px),
+  mb-50: (20px, 50px, 50px, 50px),
+  mb-small:  (16px, 16px, 32px, 32px),
+  mb-medium: (20px, 40px, 40px, 50px),
+  mb-big:    (30px, 40px, 50px, 80px),
+  
+  );
+
+
+  $pb: "padding-bottom";
+  $padding-bottom:
+/* name : margen bottom*/
+  (pb-4: (4px, 4px, 4px, 4px),
+    pb-10: (10px, 10px, 10px, 10px),
+    pb-16: (10px, 10px, 16px, 16px),
+    pb-20: (10px, 20px, 20px, 20px),
+    pb-24: (20px, 20px, 24px, 24px),
+    pb-30: (10px, 30px, 30px, 30px),
+    pb-40: (20px, 40px, 40px, 40px),
+    pb-50: (20px, 50px, 50px, 50px),
+    pb-small:  (16px, 16px, 16px, 16px),
+    pb-medium: (20px, 40px, 40px, 50px),
+    pb-big:    (30px, 40px, 50px, 80px),
+    
+    );
+
+    $pt: "padding-top";
+    $padding-top: /* name : padding  top*/
+    (
+    pt-big: (50px, 150px, 150px, 150px),
+    pt-50: (50px, 50px, 50px, 50px)
+    )!default;
+
+
+.m-0{
+  margin:0;
+}
+
+.hg .p-50 {
+  padding: 50px;
+
+}
+
+
+
+.demo{
+  td:first-child{
+    color:red;
+    font-size: 12px;
+    background-color: $primary;
+    color: white;
+text-align: center;
+  }
+
+  *:before{
+    display: none;
+  }
+
+}
+
