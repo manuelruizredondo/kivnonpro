@@ -1,5 +1,5 @@
 
-#Getting started
+# Getting started
 Primeramente usaremos node 12
 
 `npm i  ` descargar los package de desarrollo
@@ -8,7 +8,7 @@ Primeramente usaremos node 12
 `Gulp build` para generar un compilado listo para subir
 `gulp style` genera la guia de estilos y 3 css mandandolos al dist
 
-#Modulos
+# Modulos
 
 los elementos son aquellos que tienen _NOMBREDELASECCION, estos modulos no tienen header ni footer ya que están separados. 
 
