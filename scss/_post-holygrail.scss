@@ -1442,3 +1442,29 @@ ul.list-inline {
     }
   }
 }
+
+.video-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.video-slider-wrap{
+
+
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+
+}
