@@ -258,13 +258,21 @@ body {
 .box12 {
   background-color: rgba(255%, 255%, 255%, 0.9);
   padding: 54px 40px 90px;
-  position: absolute;
-  width: 60%;
+  position: relative;
+  width: 100%;
   bottom: 40px;
   .box12-link {
     position: absolute;
     bottom: 30px;
   }
+
+
+  @media (min-width: $break-md) {
+    position: absolute;
+      width: 60%;
+ 
+  }
+
 }
 /************ block-k3 ***********/
 .block-k3 {
